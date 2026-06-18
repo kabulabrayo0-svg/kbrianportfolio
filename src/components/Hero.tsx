@@ -28,9 +28,9 @@ export default function Hero() {
             <div className="relative">
               <div className="w-52 h-52 lg:w-64 lg:h-64 rounded-2xl overflow-hidden border-4 border-white/20 shadow-2xl bg-gradient-to-br from-navy-700 to-teal-800 flex items-center justify-center">
                 <img
-                  src="https://1drv.ms/i/c/f06c2acc10eb08f9/IQBhJD4kSGrCTr4RhWOO7uuIAdbwkVY0hi3GK1ErqzW2KkE?e=wSsejO"
-                  alt="Laboratory scientist"
-                  className="w-full h-full object-cover opacity-80"
+                  src="/images/lab_profilr_pic.png"
+                  alt="Brian Aleka Kabula"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute -bottom-3 -right-3 w-12 h-12 bg-teal-500 rounded-xl flex items-center justify-center shadow-lg">
@@ -75,7 +75,12 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-10">
-              <a href="#contact" className="inline-flex items-center gap-2 px-6 py-3 bg-teal-500 text-white font-semibold rounded-lg hover:bg-teal-400 transition-all duration-200 shadow-lg hover:shadow-teal-500/25 hover:-translate-y-0.5">
+              <a
+                href="https://docs.google.com/document/d/16baWzi-FJ1RG5pkUcMt-AfPsyKFTAOtx25YghtBvIf0/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-teal-500 text-white font-semibold rounded-lg hover:bg-teal-400 transition-all duration-200 shadow-lg hover:shadow-teal-500/25 hover:-translate-y-0.5"
+              >
                 <Download size={16} />
                 Download CV
               </a>

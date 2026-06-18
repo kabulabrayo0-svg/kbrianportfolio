@@ -8,7 +8,7 @@ const experiences = [
     orgColor: 'bg-teal-600',
     roles: [
       {
-        title: 'Laboratory Analyst Trainee',
+        title: 'Laboratory Analyst',
         period: '2026 – Present',
         type: 'Current Role',
         typeColor: 'bg-teal-100 text-teal-700',

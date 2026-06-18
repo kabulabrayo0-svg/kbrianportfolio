@@ -15,6 +15,20 @@ const courses = [
   'Biostatistics',
 ];
 
+const primarySchool = {
+  name: 'Kobodo Primary School',
+  period: '2006 – 2012',
+  level: 'Primary Education',
+  note: 'Kenya Certificate of Primary Education (KCPE)',
+};
+
+const secondarySchool = {
+  name: 'Rangwe Boys High School',
+  period: '2013 – 2016',
+  level: 'Secondary Education',
+  note: 'Kenya Certificate of Secondary Education (KCSE)',
+};
+
 export default function Education() {
   return (
     <section id="education" className="py-20 bg-slate-50">
@@ -27,7 +41,8 @@ export default function Education() {
           <div className="section-title-line" />
         </div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto space-y-5">
+          {/* University */}
           <div className="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
             <div className="bg-gradient-to-r from-navy-800 to-teal-700 p-6 flex items-start gap-4">
               <div className="w-14 h-14 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center flex-shrink-0">
@@ -71,6 +86,34 @@ export default function Education() {
                     <p className="font-semibold text-navy-900 text-sm">{item.value}</p>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Secondary */}
+          <div className="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
+            <div className="bg-gradient-to-r from-navy-700 to-navy-800 p-6 flex items-start gap-4">
+              <div className="w-14 h-14 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center flex-shrink-0">
+                <GraduationCap size={28} className="text-white" />
+              </div>
+              <div>
+                <p className="text-teal-300 text-xs font-semibold uppercase tracking-widest mb-1">{secondarySchool.level}</p>
+                <h3 className="text-xl font-bold text-white font-serif mb-1">{secondarySchool.name}</h3>
+                <p className="text-white/60 text-sm">{secondarySchool.period} · {secondarySchool.note}</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Primary */}
+          <div className="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
+            <div className="bg-gradient-to-r from-navy-600 to-navy-700 p-6 flex items-start gap-4">
+              <div className="w-14 h-14 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center flex-shrink-0">
+                <GraduationCap size={28} className="text-white" />
+              </div>
+              <div>
+                <p className="text-teal-300 text-xs font-semibold uppercase tracking-widest mb-1">{primarySchool.level}</p>
+                <h3 className="text-xl font-bold text-white font-serif mb-1">{primarySchool.name}</h3>
+                <p className="text-white/60 text-sm">{primarySchool.period} · {primarySchool.note}</p>
               </div>
             </div>
           </div>

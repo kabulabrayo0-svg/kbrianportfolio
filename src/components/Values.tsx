@@ -62,7 +62,7 @@ export default function Values() {
           <div className="section-title-line" />
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+        <div className="grid sm:grid-cols-2 gap-5 mb-10">
           {values.map(({ icon: Icon, title, body, color }) => {
             const c = colorMap[color as keyof typeof colorMap];
             return (

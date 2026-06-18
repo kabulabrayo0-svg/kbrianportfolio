@@ -69,8 +69,8 @@ export default function Navbar() {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden bg-white/98 backdrop-blur-sm border-t border-slate-100 shadow-lg">
-          <div className="px-4 py-4 flex flex-col gap-3">
+        <div className="md:hidden bg-white/98 backdrop-blur-sm border-t border-slate-100 shadow-lg max-w-md ml-auto rounded-bl-xl">
+          <div className="px-4 py-3 flex flex-col gap-2">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -84,7 +84,7 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={() => setMenuOpen(false)}
-              className="mt-2 text-center px-4 py-2 bg-teal-600 text-white text-sm font-semibold rounded-lg hover:bg-teal-700 transition-colors"
+              className="mt-1 text-center px-4 py-2 bg-teal-600 text-white text-sm font-semibold rounded-lg hover:bg-teal-700 transition-colors"
             >
               Hire Me
             </a>

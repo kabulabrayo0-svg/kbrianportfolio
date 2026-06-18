@@ -90,10 +90,15 @@ export default function Contact() {
             </div>
 
             <div className="flex gap-3 pt-2">
-              <button className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 bg-teal-600 text-white font-semibold text-sm rounded-xl hover:bg-teal-700 transition-all shadow-sm hover:shadow-md">
+              <a
+                href="https://docs.google.com/document/d/16baWzi-FJ1RG5pkUcMt-AfPsyKFTAOtx25YghtBvIf0/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 bg-teal-600 text-white font-semibold text-sm rounded-xl hover:bg-teal-700 transition-all shadow-sm hover:shadow-md"
+              >
                 <Download size={15} />
                 Download CV
-              </button>
+              </a>
               <a
                 href="https://www.linkedin.com/in/kabula-brianmicrobiologylabanalyst/"
                 target="_blank"

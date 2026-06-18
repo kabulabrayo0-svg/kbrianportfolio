@@ -79,16 +79,9 @@ export default function Certifications() {
             <p className="text-sm text-slate-500 mb-6">
               No entries yet for this category. This section is ready to be updated as certifications and training are completed.
             </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              <button className="inline-flex items-center gap-2 px-4 py-2 bg-teal-600 text-white text-sm font-medium rounded-lg hover:bg-teal-700 transition-colors">
-                <Plus size={14} />
-                Add Entry
-              </button>
-              <button className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 text-slate-700 text-sm font-medium rounded-lg hover:bg-slate-50 transition-colors">
-                <Upload size={14} />
-                Upload Certificate
-              </button>
-            </div>
+            <p className="text-xs text-slate-400 italic">
+              This section will be updated as certifications and training are completed.
+            </p>
           </div>
         </div>
       </div>
