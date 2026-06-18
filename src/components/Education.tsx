@@ -16,15 +16,15 @@ const courses = [
 ];
 
 const primarySchool = {
-  name: 'Kobodo Primary School',
-  period: '2006 – 2012',
+  name: 'Esumeiya Primary School',
+  period: '2007 – 2014',
   level: 'Primary Education',
   note: 'Kenya Certificate of Primary Education (KCPE)',
 };
 
 const secondarySchool = {
-  name: 'Rangwe Boys High School',
-  period: '2013 – 2016',
+  name: 'St. Charles Lwanga Senior Secondary School, Mukumu',
+  period: '2015 – 2018',
   level: 'Secondary Education',
   note: 'Kenya Certificate of Secondary Education (KCSE)',
 };

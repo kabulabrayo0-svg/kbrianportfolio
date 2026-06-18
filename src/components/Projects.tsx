@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Droplets, Fish, Microscope, Dna, ShieldCheck, ChevronDown, ChevronUp } from 'lucide-react';
 
+const LAB_IMG = '/images/image.png';
+
 const projects = [
   {
     icon: Droplets,
@@ -8,11 +10,14 @@ const projects = [
     org: 'KMFRI — Research Internship',
     period: '2025',
     color: 'teal',
-    image: 'https://images.pexels.com/photos/1048387/pexels-photo-1048387.jpeg?auto=compress&cs=tinysrgb&w=600',
+    imgStyle: { objectPosition: 'left center', filter: 'brightness(0.92) saturate(1.15) hue-rotate(-10deg)' },
+    overlay: 'from-teal-900/75 via-teal-800/30 to-transparent',
+    label: 'Membrane Filtration · Coastal Sampling',
     objective: 'Monitor microbial indicators and environmental health parameters of coastal aquatic systems to support early detection of contamination events and ecosystem health assessments.',
     methods: [
       'Systematic water sampling from multiple coastal stations',
       'Microbiological testing for indicator organisms (coliforms, E. coli)',
+      'Membrane filtration for quantitative enumeration of indicator bacteria',
       'Pathogen monitoring including Vibrio spp. in marine samples',
       'Physicochemical parameter recording alongside microbial analysis',
       'Data collection, tabulation, and reporting to research supervisors',
@@ -25,7 +30,9 @@ const projects = [
     org: 'KMFRI — Research Internship',
     period: '2025',
     color: 'navy',
-    image: 'https://images.pexels.com/photos/3374210/pexels-photo-3374210.jpeg?auto=compress&cs=tinysrgb&w=600',
+    imgStyle: { objectPosition: 'center top', filter: 'brightness(0.88) saturate(0.95) contrast(1.05)' },
+    overlay: 'from-navy-900/80 via-navy-700/30 to-transparent',
+    label: 'Blood Sampling · Tissue Analysis',
     objective: 'Support aquatic animal health assessments by conducting laboratory analyses of fish biological samples to investigate pathogen presence and health indicators.',
     methods: [
       'Structured collection of biological samples from fish specimens',
@@ -42,7 +49,9 @@ const projects = [
     org: 'KMFRI — Research Internship',
     period: '2025',
     color: 'teal',
-    image: 'https://images.pexels.com/photos/8851494/pexels-photo-8851494.jpeg?auto=compress&cs=tinysrgb&w=600',
+    imgStyle: { objectPosition: 'right center', filter: 'brightness(0.85) saturate(1.2) contrast(1.08)' },
+    overlay: 'from-teal-950/80 via-slate-800/20 to-transparent',
+    label: 'Selective Media · Coliform Enumeration',
     objective: 'Monitor microbial contamination in marine and coastal environments, with a focus on indicator organisms and pathogens relevant to public health and ecosystem monitoring.',
     methods: [
       'Enumeration of total coliforms and E. coli using standard culture methods',
@@ -59,7 +68,9 @@ const projects = [
     org: 'KMFRI — Research Internship',
     period: '2025',
     color: 'navy',
-    image: 'https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=600',
+    imgStyle: { objectPosition: 'center bottom', filter: 'brightness(0.80) saturate(0.85) contrast(1.12) hue-rotate(15deg)' },
+    overlay: 'from-navy-950/85 via-blue-900/25 to-transparent',
+    label: 'DNA Extraction · Gel Electrophoresis',
     objective: 'Support laboratory identification and molecular characterization of microorganisms isolated from marine environmental samples.',
     methods: [
       'DNA extraction from bacterial isolates and environmental samples',
@@ -73,10 +84,12 @@ const projects = [
   {
     icon: ShieldCheck,
     title: 'Laboratory Quality Assurance Support',
-    org: 'KMFRI — Analyst Trainee & Junior Clerk',
+    org: 'KMFRI — Analyst & Junior Clerk',
     period: '2025 – Present',
     color: 'teal',
-    image: 'https://images.pexels.com/photos/8851519/pexels-photo-8851519.jpeg?auto=compress&cs=tinysrgb&w=600',
+    imgStyle: { objectPosition: 'center center', filter: 'brightness(0.82) saturate(0.75) contrast(1.1) grayscale(0.15)' },
+    overlay: 'from-slate-900/85 via-teal-900/20 to-transparent',
+    label: 'GLP · SOP Compliance · QC Documentation',
     objective: 'Maintain the reliability, traceability, and integrity of laboratory results through systematic application of quality assurance and quality control practices.',
     methods: [
       'Implementation of Good Laboratory Practice (GLP) standards across all procedures',
@@ -90,8 +103,8 @@ const projects = [
 ];
 
 const colorMap = {
-  teal: { border: 'border-teal-200', iconBg: 'bg-teal-50', iconColor: 'text-teal-600', badge: 'bg-teal-100 text-teal-700' },
-  navy: { border: 'border-navy-200', iconBg: 'bg-navy-50', iconColor: 'text-navy-700', badge: 'bg-navy-100 text-navy-700' },
+  teal: { border: 'border-teal-200', iconBg: 'bg-teal-50', iconColor: 'text-teal-600', badge: 'bg-teal-600 text-white' },
+  navy: { border: 'border-navy-200', iconBg: 'bg-navy-50', iconColor: 'text-navy-700', badge: 'bg-navy-700 text-white' },
 };
 
 export default function Projects() {
@@ -116,11 +129,24 @@ export default function Projects() {
 
             return (
               <div key={p.title} className={`rounded-xl border ${c.border} overflow-hidden card-hover bg-white`}>
-                <div className="relative h-44 overflow-hidden">
-                  <img src={p.image} alt={p.title} className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy-900/70 to-transparent" />
-                  <div className="absolute bottom-3 left-3">
-                    <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${c.badge}`}>{p.period}</span>
+                {/* Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={LAB_IMG}
+                    alt={p.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    style={p.imgStyle}
+                  />
+                  <div className={`absolute inset-0 bg-gradient-to-t ${p.overlay}`} />
+                  {/* Period badge */}
+                  <div className="absolute top-3 right-3">
+                    <span className={`text-xs px-2.5 py-1 rounded-full font-semibold ${c.badge} shadow-sm`}>
+                      {p.period}
+                    </span>
+                  </div>
+                  {/* Activity label at bottom */}
+                  <div className="absolute bottom-0 left-0 right-0 px-4 pb-3">
+                    <p className="text-white text-xs font-medium opacity-90 leading-snug">{p.label}</p>
                   </div>
                 </div>
 
