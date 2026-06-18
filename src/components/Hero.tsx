@@ -28,7 +28,7 @@ export default function Hero() {
             <div className="relative">
               <div className="w-52 h-52 lg:w-64 lg:h-64 rounded-2xl overflow-hidden border-4 border-white/20 shadow-2xl bg-gradient-to-br from-navy-700 to-teal-800 flex items-center justify-center">
                 <img
-                  src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=400"
+                  src="https://1drv.ms/i/c/f06c2acc10eb08f9/IQBhJD4kSGrCTr4RhWOO7uuIAdbwkVY0hi3GK1ErqzW2KkE?e=wSsejO"
                   alt="Laboratory scientist"
                   className="w-full h-full object-cover opacity-80"
                 />
